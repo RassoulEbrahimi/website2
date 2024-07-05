@@ -86,16 +86,13 @@ window.onscroll = () => {
             });
             // active sections for animation on scroll
             sec.classList.add('show-animate');
-        }
-        // if want to use animation that repeats on scroll use this
-        else {
+        } else {
             sec.classList.remove('show-animate');
         }
     });
 
     // sticky header
     let header = document.querySelector('header');
-
     header.classList.toggle('sticky', window.scrollY > 100);
 
     // remove toggle icon and navbar when click navbar links (scroll)
@@ -109,8 +106,7 @@ window.onscroll = () => {
 
     if (Math.ceil(scrolled) === scrollable) {
         footer.classList.add('show-animate');
-    }
-    else {
+    } else {
         footer.classList.remove('show-animate');
     }
 }
@@ -125,7 +121,9 @@ function showSlides() {
         slides[i].style.display = "none";
     }
     slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
+    if (slideIndex > slides.length) {
+        slideIndex = 1
+    }
     slides[slideIndex - 1].style.display = "block";
     setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
