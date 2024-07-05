@@ -969,9 +969,10 @@ section:nth-child(odd) .animate.scroll,
 
 .mySlides img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;  /* Maintain aspect ratio */
+    object-fit: cover;  /* Cover the entire container */
 }
+
 
 .fade {
     -webkit-animation-name: fade;
